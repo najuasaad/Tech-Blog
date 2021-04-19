@@ -1,0 +1,25 @@
+{{!-- here we will see:
+1. blog posts user has created, when clicked DELETE and PUT options
+2. Option to post a new blog which requires title and contents
+    model with id, username, username id, title, body, timestamp post, timestamp update
+ --}}
+
+<div class="container p-3">
+
+    {{#each userpost as |post|}}
+
+    <div class="card p-1 m-3">
+    <div class="card-body">
+        <h5 class="card-title">{{title}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{username}}</h6>
+        <p class="card-text">{{content}}</p>
+        <a href="#" class="card-link">Update</a>
+        <a href="#" class="card-link">Delete</a>
+    </div>
+    </div>
+
+    {{/each}}
+
+    <button type="button" class="btn btn-dark p-3">Create New Post</button>
+
+</div>
